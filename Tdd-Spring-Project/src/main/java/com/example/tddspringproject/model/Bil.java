@@ -15,6 +15,10 @@ public class Bil {
     public boolean halfLightsOn;
     public boolean backLightsOn;
     public boolean warningLightsOn;
+    public boolean brake;
+    public boolean brakeLight;
+    public int batteryLife;
+    public int batteryUsage;
     public int speed;
     public int gear;
 }

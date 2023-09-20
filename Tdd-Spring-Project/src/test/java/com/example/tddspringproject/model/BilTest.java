@@ -105,7 +105,20 @@ class BilTest {
     @Test
     void testBrake () {
         testbil = bilManipulator.brake(testbil);
+        assertThat(testbil.brakeLight).isTrue();
+        assertThat(testbil.brake).isTrue();
         assertThat(testbil.speed).isEqualTo(0);
+    }
+
+    @Test
+    void testReleaseBrake () {
+        testbil = bilManipulator.brake(testbil);
+        assertThat(testbil.brake).isTrue();
+        assertThat(testbil.brakeLight).isTrue();
+
+        testbil = bilManipulator.releaseBrake(testbil);
+        assertThat(testbil.brake).isFalse();
+        assertThat(testbil.brakeLight).isFalse();
     }
 
     @Test
@@ -116,16 +129,28 @@ class BilTest {
 
     @Test
     void testDrive () {
-        testbil = bilManipulator.changeGear(testbil, 5);
+        testbil = bilManipulator.drive(testbil);
         assertThat(testbil.gear).isGreaterThan(0);
     }
+
     @Test
     void testReverse () {
-        testbil = bilManipulator.changeGear(testbil, -1);
+        testbil = bilManipulator.reverse(testbil);
         assertThat(testbil.gear).isLessThan(0);
     }
 
+    @Test
+    void testBatteryLife () {
+        testbil = bilManipulator.batteryLife(testbil, 100);
+        testbil = bilManipulator.changeSpeed(testbil, 40);
+        assertThat(testbil.batteryLife).isEqualTo(96);
+    }
 
+    @Test
+    void testBatteryUsage () {
+        testbil = bilManipulator.changeSpeed(testbil, 40);
+        assertThat(testbil.batteryUsage).isEqualTo(4);
+    }
 }
 //    @Test
 //    void convertCsvToList() throws FileNotFoundException {

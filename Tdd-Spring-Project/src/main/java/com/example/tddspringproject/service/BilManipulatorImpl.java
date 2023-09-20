@@ -97,6 +97,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil changeSpeed(Bil bil, int speed) {
         if (speed <= 180 && speed >=0) {
             bil.speed = speed;
+            bil = this.batteryUsage(bil, speed/10);
         }
         return bil;
     }
@@ -104,12 +105,51 @@ public class BilManipulatorImpl implements BilManipulator {
     @Override
     public Bil brake (Bil bil) {
         bil = this.changeSpeed(bil, 0);
+        bil.brake = true;
+        bil.brakeLight = true;
+        return bil;
+    }
+
+    @Override
+    public Bil releaseBrake (Bil bil) {
+        bil.brake = false;
+        bil.brakeLight = false;
         return bil;
     }
 
     @Override
     public Bil changeGear(Bil bil, int gear) {
         bil.gear = gear;
+        return bil;
+    }
+
+    @Override
+    public Bil drive(Bil bil) {
+        bil = this.changeGear(bil, 1);
+        return bil;
+    }
+
+    @Override
+    public Bil reverse(Bil bil) {
+        bil = this.changeGear(bil, -1);
+        return bil;
+    }
+
+    @Override
+    public Bil batteryLife(Bil bil, int life) {
+        bil.batteryLife = life;
+        return bil;
+    }
+
+    @Override
+    public Bil batteryUsage(Bil bil, int usage) {
+        bil.batteryUsage = usage;
+        if (bil.batteryLife - usage > 0) {
+            bil.batteryLife -= usage;
+        } else {
+            bil.batteryLife = 0;
+        }
+
         return bil;
     }
 

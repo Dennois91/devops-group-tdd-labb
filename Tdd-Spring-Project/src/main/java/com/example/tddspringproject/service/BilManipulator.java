@@ -24,6 +24,15 @@ public interface BilManipulator {
     Bil changeSpeed(Bil bil, int speed);
 
     Bil brake (Bil bil);
+    Bil releaseBrake(Bil bil);
 
     Bil changeGear(Bil bil, int gear);
+
+    Bil drive(Bil bil);
+
+    Bil reverse(Bil bil);
+
+    Bil batteryLife(Bil bil, int life);
+
+    Bil batteryUsage(Bil bil, int usage);
 }
