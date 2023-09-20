@@ -6,17 +6,17 @@ public interface BilManipulator {
     Bil lightsOn (Bil bil);
     Bil lightsOff (Bil bil);
 
-    Bil halfLifhtsOn (Bil bil);
-    Bil halfLifhtsOff (Bil bil);
+    Bil halfLightsOn (Bil bil);
+    Bil halfLightsOff (Bil bil);
 
-    Bil fullLifhtsOn (Bil bil);
-    Bil fullLifhtsOff (Bil bil);
+    Bil fullLightsOn (Bil bil);
+    Bil fullLightsOff (Bil bil);
 
-    Bil backLifhtsOn (Bil bil);
-    Bil backLifhtsOff (Bil bil);
+    Bil backLightsOn (Bil bil);
+    Bil backLightsOff (Bil bil);
 
-    Bil waringLifhtsOn (Bil bil);
-    Bil waringLifhtsOff (Bil bil);
+    Bil waringLightsOn (Bil bil);
+    Bil waringLightsOff (Bil bil);
 
     Bil startCar(Bil testbil);
     Bil stopCar(Bil testbil);

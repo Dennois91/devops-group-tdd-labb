@@ -46,12 +46,12 @@ public class BilManipulatorImpl implements BilManipulator {
 
     @Override
     public Bil halfLightOff(Bil bil) {
-        bil.halfLifhtsOn = false;
+        bil.halfLightsOn = false;
         return bil;
     }
 
     @Override
-    public Bil fullLifhtsOn(Bil bil) {
+    public Bil fullLightsOn(Bil bil) {
         if (bil.running) {
             bil.fullLightsOn = true;
             bil = bilManipulator.halfLightsOff(bil);
@@ -61,7 +61,7 @@ public class BilManipulatorImpl implements BilManipulator {
 
     @Override
     public Bil fullLightOff(Bil bil) {
-        bil.fullLifhtsOn = false;
+        bil.fullLightsOn = false;
         return bil;
     }
 
@@ -75,19 +75,19 @@ public class BilManipulatorImpl implements BilManipulator {
 
     @Override
     public Bil backLightOff(Bil bil) {
-        bil.backLifhtsOn = false;
+        bil.backLightsOn = false;
         return bil;
     }
 
     @Override
-    public Bil warningLifhtsOn(Bil bil) {
+    public Bil warningLightsOn(Bil bil) {
         bil.warningLightsOn = true;
         return bil;
     }
 
     @Override
     public Bil warningLightOff(Bil bil) {
-        bil.warningLifhtsOn = false;
+        bil.warningLightsOn = false;
         return bil;
     }
 }

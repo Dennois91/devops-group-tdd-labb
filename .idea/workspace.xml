@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/model/Bil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/model/Bil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Logic",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
@@ -56,9 +50,22 @@
       <updated>1695198896175</updated>
       <workItem from="1695198897294" duration="173000" />
     </task>
+    <task id="LOCAL-00001" summary="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly.">
+      <option name="closed" value="true" />
+      <created>1695207810127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695207810127</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
   </component>
 </project>
