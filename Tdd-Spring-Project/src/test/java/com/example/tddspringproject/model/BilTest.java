@@ -1,6 +1,7 @@
 package com.example.tddspringproject.model;
 
 import com.example.tddspringproject.service.BilManipulator;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,16 +13,20 @@ class BilTest {
 
     BilManipulator bilManipulator;
 
+    Bil testbil;
+
     @Autowired
     public BilTest(BilManipulator bilManipulator) {
         this.bilManipulator = bilManipulator;
     }
 
+    @BeforeEach
+    void bilSetUp() {
+        testbil = new Bil();
+    }
 
     @Test
     void lightIsOn() {
-
-        Bil testbil = new Bil();
         assertThat(testbil.lightsOn).isFalse();
         testbil = bilManipulator.lightsOn(testbil);
         assertThat(testbil.lightsOn).isTrue();
@@ -29,26 +34,20 @@ class BilTest {
 
     @Test
     void lightIsOff() {
-
-        Bil testbil = new Bil();
         testbil = bilManipulator.lightsOff(testbil);
         assertThat(testbil.lightsOn).isFalse();
     }
 
     @Test
     void TestStartCar() {
-
-        Bil testbil = new Bil();
         assertThat(testbil.running).isFalse();
         testbil = bilManipulator.startCar(testbil);
         assertThat(testbil.running).isTrue();
     }
 
     @Test
-    void TestCarOff() {
-
-        Bil testbil = new Bil();
-        testbil = bilManipulator.lightOn(testbil);
+    void TestStopCar() {
+        testbil = bilManipulator.lightsOn(testbil);
         testbil = bilManipulator.stopCar(testbil);
 
         assertThat(testbil.running).isFalse();
@@ -56,8 +55,74 @@ class BilTest {
     }
 
     @Test
-    void TestWarningLight () {
+    void TestWarningLightOff () {
+        testbil = bilManipulator.warningLightsOff(testbil);
+        assertThat(testbil.warningLightsOn).isFalse();
+    }
+    @Test
+    void TestWarningLightOn () {
+        testbil = bilManipulator.warningLightsOn(testbil);
+        assertThat(testbil.warningLightsOn).isTrue();
+    }
 
+    @Test
+    void TestBackLightOff () {
+        testbil = bilManipulator.backLightsOff(testbil);
+        assertThat(testbil.backLightsOn).isFalse();
+    }
+    @Test
+    void TestBackLightOn () {
+        testbil = bilManipulator.backLightsOn(testbil);
+        assertThat(testbil.backLightsOn).isTrue();
+    }
+
+    @Test
+    void TestFullLightOff () {
+        testbil = bilManipulator.fulLightsOff(testbil);
+        assertThat(testbil.fullLightsOn).isFalse();
+    }
+    @Test
+    void TestFullLightOn () {
+        testbil = bilManipulator.fulLightsOn(testbil);
+        assertThat(testbil.fullLightsOn).isTrue();
+    }
+
+    @Test
+    void TestChangeSpeed () {
+        testbil = bilManipulator.changeSpeed(testbil,50);
+        assertThat(testbil.speed).isEqualTo(50);
+    }
+
+    @Test
+    void TestMaxOrMinSpeed () {
+        testbil = bilManipulator.changeSpeed(testbil,200);
+        assertThat(testbil.speed).isNotEqualTo(200);
+
+        testbil = bilManipulator.changeSpeed(testbil,-50);
+        assertThat(testbil.speed).isNotEqualTo(-50);
+    }
+
+    @Test
+    void testBrake () {
+        testbil = bilManipulator.brake(testbil);
+        assertThat(testbil.speed).isEqualTo(0);
+    }
+
+    @Test
+    void testGearDrive () {
+        testbil = bilManipulator.changeGear(testbil, 5);
+        assertThat(testbil.gear).isEqualTo(5);
+    }
+
+    @Test
+    void testDrive () {
+        testbil = bilManipulator.changeGear(testbil, 5);
+        assertThat(testbil.gear).isGreaterThan(0);
+    }
+    @Test
+    void testReverse () {
+        testbil = bilManipulator.changeGear(testbil, -1);
+        assertThat(testbil.gear).isLessThan(0);
     }
 
 

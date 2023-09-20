@@ -8,12 +8,14 @@ public class BilManipulatorImpl implements BilManipulator {
     @Override
     public Bil startCar(Bil bil) {
         bil.running = true;
+        bil = this.changeSpeed(bil, 0);
         return bil;
     }
 
     @Override
     public Bil stopCar(Bil bil) {
         bil.running = false;
+        bil = this.changeSpeed(bil, 0);
         bil = this.lightsOff(bil);
         return bil;
     }
@@ -90,4 +92,26 @@ public class BilManipulatorImpl implements BilManipulator {
         bil.warningLightsOn = false;
         return bil;
     }
+
+    @Override
+    public Bil changeSpeed(Bil bil, int speed) {
+        if (speed <= 180 && speed >=0) {
+            bil.speed = speed;
+        }
+        return bil;
+    }
+
+    @Override
+    public Bil brake (Bil bil) {
+        bil = this.changeSpeed(bil, 0);
+        return bil;
+    }
+
+    @Override
+    public Bil changeGear(Bil bil, int gear) {
+        bil.gear = gear;
+        return bil;
+    }
+
+
 }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Typos hotfix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Typos hotfix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +50,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Desktop/IntelliJ Projekt/devops-group-tdd-labb/Tdd-Spring-Project",
+    "last_opened_file_path": "C:/Users/jonat/Desktop/Javautveckling/devops-group-tdd-labb/Tdd-Spring-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -70,6 +68,7 @@
       <workItem from="1695198897294" duration="173000" />
       <workItem from="1695208380610" duration="373000" />
       <workItem from="1695208802665" duration="82000" />
+      <workItem from="1695209884483" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly.">
       <option name="closed" value="true" />
@@ -100,6 +99,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />

@@ -18,6 +18,12 @@ public interface BilManipulator {
     Bil warningLightsOn (Bil bil);
     Bil warningLightsOff (Bil bil);
 
-    Bil startCar(Bil testbil);
-    Bil stopCar(Bil testbil);
+    Bil startCar(Bil bil);
+    Bil stopCar(Bil bil);
+
+    Bil changeSpeed(Bil bil, int speed);
+
+    Bil brake (Bil bil);
+
+    Bil changeGear(Bil bil, int gear);
 }
