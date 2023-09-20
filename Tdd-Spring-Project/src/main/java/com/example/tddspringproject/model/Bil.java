@@ -9,9 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Bil {
 
-    public boolean lightsOn;
-    public boolean fullLight = true;
-    public boolean halfLights = true;
-    public boolean backLights = true;
     public boolean running;
+    public boolean lightsOn;
+    public boolean fullLightsOn;
+    public boolean halfLightsOn;
+    public boolean backLightsOn;
+    public boolean warningLightsOn;
 }

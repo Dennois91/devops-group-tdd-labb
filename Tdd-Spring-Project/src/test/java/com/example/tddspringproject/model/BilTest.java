@@ -23,7 +23,7 @@ class BilTest {
 
         Bil testbil = new Bil();
         assertThat(testbil.lightsOn).isFalse();
-        testbil = bilManipulator.lightOn(testbil);
+        testbil = bilManipulator.lightsOn(testbil);
         assertThat(testbil.lightsOn).isTrue();
     }
 
@@ -31,29 +31,8 @@ class BilTest {
     void lightIsOff() {
 
         Bil testbil = new Bil();
-        testbil = bilManipulator.lightOff(testbil);
+        testbil = bilManipulator.lightsOff(testbil);
         assertThat(testbil.lightsOn).isFalse();
-    }
-
-    @Test
-    void TestCarHasFullLights() {
-
-        Bil testbil = new Bil();
-        assertThat(testbil.fullLight).isTrue();
-    }
-
-    @Test
-    void TestCarHasHalfLights() {
-
-        Bil testbil = new Bil();
-        assertThat(testbil.halfLights).isTrue();
-    }
-
-    @Test
-    void TestCarHasBackLights() {
-
-        Bil testbil = new Bil();
-        assertThat(testbil.backLights).isTrue();
     }
 
     @Test
@@ -77,7 +56,9 @@ class BilTest {
     }
 
     @Test
-    void TestWarningLight
+    void TestWarningLight () {
+
+    }
 
 
 }

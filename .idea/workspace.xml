@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="" />
+    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/model/Bil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/model/Bil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2VeaFUDkj58pk1MLNgPFnTtbIdm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,8 +40,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Logic",
     "ignore.virus.scanning.warn.message": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
