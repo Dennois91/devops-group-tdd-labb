@@ -8,6 +8,7 @@ class TddSpringProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
