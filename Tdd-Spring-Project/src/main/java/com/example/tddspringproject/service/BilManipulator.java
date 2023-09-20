@@ -9,14 +9,14 @@ public interface BilManipulator {
     Bil halfLightsOn (Bil bil);
     Bil halfLightsOff (Bil bil);
 
-    Bil fullLightsOn (Bil bil);
-    Bil fullLightsOff (Bil bil);
+    Bil fulLightsOn (Bil bil);
+    Bil fulLightsOff (Bil bil);
 
     Bil backLightsOn (Bil bil);
     Bil backLightsOff (Bil bil);
 
-    Bil waringLightsOn (Bil bil);
-    Bil waringLightsOff (Bil bil);
+    Bil warningLightsOn (Bil bil);
+    Bil warningLightsOff (Bil bil);
 
     Bil startCar(Bil testbil);
     Bil stopCar(Bil testbil);

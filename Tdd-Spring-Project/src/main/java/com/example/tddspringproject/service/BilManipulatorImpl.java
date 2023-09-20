@@ -14,53 +14,53 @@ public class BilManipulatorImpl implements BilManipulator {
     @Override
     public Bil stopCar(Bil bil) {
         bil.running = false;
-        bil = bilManipulator.LightsOff(bil);
+        bil = this.lightsOff(bil);
         return bil;
     }
 
     @Override
     public Bil lightsOn(Bil bil) {
         bil.lightsOn = true;
-        bil = bilManipulator.halfLightsOn(bil);
-        bil = bilManipulator.backLightsOn(bil);
+        bil = this.halfLightsOn(bil);
+        bil = this.backLightsOn(bil);
         return bil;
     }
 
     @Override
     public Bil lightsOff(Bil bil) {
         bil.lightsOn = false;
-        bil = bilManipulator.halfLightsOff(bil);
-        bil = bilManipulator.fullLightsOff(bil);
-        bil = bilManipulator.backLightsOff(bil);
+        bil = this.halfLightsOff(bil);
+        bil = this.fulLightsOff(bil);
+        bil = this.backLightsOff(bil);
         return bil;
     }
 
     @Override
-    public Bil halfLifhtsOn(Bil bil) {
+    public Bil halfLightsOn(Bil bil) {
         if (bil.running) {
             bil.halfLightsOn = true;
-            bil = bilManipulator.fullLightsOff(bil);
+            bil = this.fulLightsOff(bil);
         }
         return bil;
     }
 
     @Override
-    public Bil halfLightOff(Bil bil) {
+    public Bil halfLightsOff(Bil bil) {
         bil.halfLightsOn = false;
         return bil;
     }
 
     @Override
-    public Bil fullLightsOn(Bil bil) {
+    public Bil fulLightsOn(Bil bil) {
         if (bil.running) {
             bil.fullLightsOn = true;
-            bil = bilManipulator.halfLightsOff(bil);
+            bil = this.halfLightsOff(bil);
         }
         return bil;
     }
 
     @Override
-    public Bil fullLightOff(Bil bil) {
+    public Bil fulLightsOff(Bil bil) {
         bil.fullLightsOn = false;
         return bil;
     }
@@ -74,7 +74,7 @@ public class BilManipulatorImpl implements BilManipulator {
     }
 
     @Override
-    public Bil backLightOff(Bil bil) {
+    public Bil backLightsOff(Bil bil) {
         bil.backLightsOn = false;
         return bil;
     }
@@ -86,7 +86,7 @@ public class BilManipulatorImpl implements BilManipulator {
     }
 
     @Override
-    public Bil warningLightOff(Bil bil) {
+    public Bil warningLightsOff(Bil bil) {
         bil.warningLightsOn = false;
         return bil;
     }

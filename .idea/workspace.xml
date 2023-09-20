@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
+    <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Typos hotfix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +19,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LukasChyle&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="92ba6bcb-95c4-4af3-96a2-09666201a235" />
+        <option name="url" value="https://github.com/Dennois91/devops-group-tdd-labb.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,6 +52,9 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Desktop/IntelliJ Projekt/devops-group-tdd-labb/Tdd-Spring-Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
@@ -49,6 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695198896175</updated>
       <workItem from="1695198897294" duration="173000" />
+      <workItem from="1695208380610" duration="373000" />
+      <workItem from="1695208802665" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly.">
       <option name="closed" value="true" />
@@ -58,7 +79,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695207810127</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly.">
+      <option name="closed" value="true" />
+      <created>1695208635786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695208635786</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Typos hotfix">
+      <option name="closed" value="true" />
+      <created>1695208658218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695208658218</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly." />
+    <MESSAGE value="Typos hotfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Typos hotfix" />
   </component>
 </project>
