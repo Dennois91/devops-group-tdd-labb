@@ -18,8 +18,7 @@ jobs:
        node-version: '18'
 
       #Run all tests and print report
-    - name: Run all test
-      run: ./gradlew test
-
-    - name: Upload test report
-      uses: actions/upload-artifact@v2
+    - name: Run all tests
+      run: |
+          npm install
+          npm run Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java
