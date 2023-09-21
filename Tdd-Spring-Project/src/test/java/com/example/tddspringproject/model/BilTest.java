@@ -72,6 +72,7 @@ class BilTest {
     }
     @Test
     void TestBackLightOn () {
+        testbil = bilManipulator.startCar(testbil);
         testbil = bilManipulator.backLightsOn(testbil);
         assertThat(testbil.backLightsOn).isTrue();
     }
@@ -83,6 +84,7 @@ class BilTest {
     }
     @Test
     void TestFullLightOn () {
+        testbil = bilManipulator.startCar(testbil);
         testbil = bilManipulator.fulLightsOn(testbil);
         assertThat(testbil.fullLightsOn).isTrue();
     }
@@ -141,30 +143,30 @@ class BilTest {
 
     @Test
     void testBatteryLife () {
-        testbil = bilManipulator.batteryLife(testbil, 100);
+
         testbil = bilManipulator.changeSpeed(testbil, 40);
-        assertThat(testbil.batteryLife).isEqualTo(96);
+        assertThat(testbil.batteryLife).isEqualTo(960);
     }
 
     @Test
     void testBatteryUsageCombined () {
         testbil = bilManipulator.startCar(testbil);
         testbil = bilManipulator.changeSpeed(testbil, 40);
-        assertThat(testbil.batteryUsage).isEqualTo(4);
+        assertThat(testbil.batteryUsage).isEqualTo(40);
         testbil = bilManipulator.lightsOn(testbil);
-        assertThat(testbil.batteryUsage).isEqualTo(4.2);
+        assertThat(testbil.batteryUsage).isEqualTo(42);
     }
     @Test
     void testBatteryUsageLights (){
         testbil = bilManipulator.startCar(testbil);
         testbil = bilManipulator.lightsOn(testbil);
-        assertThat(testbil.batteryUsage).isEqualTo(0.2);
+        assertThat(testbil.batteryUsage).isEqualTo(2);
     }
     @Test
     void testBatteryUsageSpeed () {
 
         testbil = bilManipulator.changeSpeed(testbil, 40);
-        assertThat(testbil.batteryUsage).isEqualTo(4);
+        assertThat(testbil.batteryUsage).isEqualTo(40);
     }
 
 

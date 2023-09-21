@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 public class BilManipulatorImpl implements BilManipulator {
     @Override
     public Bil startCar(Bil bil) {
-        bil = this.changeSpeed(bil, 0);
         bil.running = true;
+        bil = this.changeSpeed(bil, 0);
+
         return bil;
     }
 
@@ -45,7 +46,7 @@ public class BilManipulatorImpl implements BilManipulator {
         if (bil.running && !bil.halfLightsOn) {
             bil.halfLightsOn = true;
             bil = this.fulLightsOff(bil);
-            bil.batteryUsage += 0.1;
+            bil.batteryUsage += 1;
         }
         return bil;
     }
@@ -54,7 +55,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil halfLightsOff(Bil bil) {
         if(bil.halfLightsOn){
             bil.halfLightsOn = false;
-            bil.batteryUsage -= 0.1;
+            bil.batteryUsage -= 2;
         }
 
         return bil;
@@ -65,7 +66,7 @@ public class BilManipulatorImpl implements BilManipulator {
         if (bil.running && !bil.fullLightsOn) {
             bil.fullLightsOn = true;
             bil = this.halfLightsOff(bil);
-            bil.batteryUsage += 0.2;
+            bil.batteryUsage += 2;
         }
         return bil;
     }
@@ -75,7 +76,7 @@ public class BilManipulatorImpl implements BilManipulator {
 
         if (bil.fullLightsOn) {
             bil.fullLightsOn = false;
-            bil.batteryUsage -= 0.2;
+            bil.batteryUsage -= 2;
         }
 
         return bil;
@@ -85,7 +86,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil backLightsOn(Bil bil) {
         if (bil.running && !bil.backLightsOn) {
             bil.backLightsOn = true;
-            bil.batteryUsage += 0.1;
+            bil.batteryUsage += 1;
         }
         return bil;
     }
@@ -94,7 +95,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil backLightsOff(Bil bil) {
         if(bil.backLightsOn){
             bil.backLightsOn = false;
-            bil.batteryUsage -= 0.1;
+            bil.batteryUsage -= 1;
         }
 
         return bil;
@@ -104,7 +105,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil warningLightsOn(Bil bil) {
         if(!bil.warningLightsOn){
             bil.warningLightsOn = true;
-            bil.batteryUsage += 0.1;
+            bil.batteryUsage += 1;
         }
 
         return bil;
@@ -114,7 +115,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil warningLightsOff(Bil bil) {
         if(bil.warningLightsOn){
             bil.warningLightsOn = false;
-            bil.batteryUsage -= 0.1;
+            bil.batteryUsage -= 1;
         }
 
         return bil;
@@ -124,7 +125,7 @@ public class BilManipulatorImpl implements BilManipulator {
     public Bil changeSpeed(Bil bil, int speed) {
         if (speed <= 180 && speed >=0) {
             bil.speed = speed;
-            bil = this.batteryUsage(bil, speed/10);
+            bil = this.batteryUsage(bil, speed);
         }
         return bil;
     }
@@ -163,13 +164,13 @@ public class BilManipulatorImpl implements BilManipulator {
     }
 
     @Override
-    public Bil batteryLife(Bil bil, double life) {
+    public Bil batteryLife(Bil bil, int life) {
         bil.batteryLife = life;
         return bil;
     }
 
     @Override
-    public Bil batteryUsage(Bil bil, double usage) {
+    public Bil batteryUsage(Bil bil, int usage) {
         bil.batteryUsage = usage;
         if (bil.batteryLife - usage > 0) {
             bil.batteryLife -= usage;

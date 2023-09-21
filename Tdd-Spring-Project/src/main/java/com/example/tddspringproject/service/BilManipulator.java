@@ -32,7 +32,7 @@ public interface BilManipulator {
 
     Bil reverse(Bil bil);
 
-    Bil batteryLife(Bil bil, double life);
+    Bil batteryLife(Bil bil, int life);
 
-    Bil batteryUsage(Bil bil, double usage);
+    Bil batteryUsage(Bil bil, int usage);
 }
