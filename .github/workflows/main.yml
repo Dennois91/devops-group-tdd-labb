@@ -1,24 +1,33 @@
-name: Run all Tests
+name: Build and Test Java Spring Boot Application
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-  
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-       node-version: '18'
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+          
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      #Run all tests and print report
-    - name: Run all tests
-      run: |
-          npm install
-          npm run Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+
+      - name: Test Report
+        uses: actions/upload-artifact@v3
+        if: success() || failure()
+        with:
+          name: SpringBoot Report               # Name of the folder
+          path: Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java # Path to test results
+     
