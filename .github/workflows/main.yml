@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup jdk
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
+    - name: Checkout code
+      uses: actions/checkout@v4
+  
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+       node-version: '18'
 
       #Run all tests and print report
-      - name: Run all tests
-        run: ./gradlew test
+    - name: Run all test
+      run: ./gradlew test
 
-      - name: Upload test report
-        uses: actions/upload-artifact@v2
+    - name: Upload test report
+      uses: actions/upload-artifact@v2
