@@ -18,9 +18,12 @@ jobs:
         with:
           node-version: '18'
 
-      #Run all tests and print report
+      #Run all tests from test foloder
+
       - name: Run all tests
-        run: ./gradlew test
+        run: |
+          npm install
+          npm run test
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
