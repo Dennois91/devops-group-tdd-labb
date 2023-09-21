@@ -20,6 +20,5 @@ jobs:
       #Run all tests and print report
     - name: Run all tests
       run: |
-          cd test
           npm install
           npm run Tdd-Spring-Project/src/test/java/com/example/tddspringproject/model/BilTest.java
