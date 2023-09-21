@@ -27,5 +27,6 @@ jobs:
         run: ./gradlew build
 
       - name: Test with Gradle
-        run: ./gradlew test --scan --scan-accept
-     
+        env:
+         GRADLE_ENTERPRISE_LICENSE_AGREE: "true"
+        run: ./gradlew test --scan
