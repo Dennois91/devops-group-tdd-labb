@@ -22,9 +22,9 @@ jobs:
 
       - name: Run all tests
         run: |
+          cd test
           npm install
           npm run test
-
-      - name: Upload test report
-        uses: actions/upload-artifact@v2
-
+          
+      
+     
