@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: 17
 
-      #Run all tests and print report
+      #Run all tests and print repo
       - name: Run all tests
         run: ./gradlew test
 
