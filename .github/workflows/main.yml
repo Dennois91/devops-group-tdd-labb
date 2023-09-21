@@ -27,5 +27,5 @@ jobs:
         run: ./gradlew build
 
       - name: Test with Gradle
-        run: ./gradlew test --scan-accept
+        run: ./gradlew test --scan --scan-accept
      
