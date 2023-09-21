@@ -7,16 +7,17 @@ import org.springframework.stereotype.Service;
 public class BilManipulatorImpl implements BilManipulator {
     @Override
     public Bil startCar(Bil bil) {
-        bil.running = true;
         bil = this.changeSpeed(bil, 0);
+        bil.running = true;
         return bil;
     }
 
     @Override
     public Bil stopCar(Bil bil) {
-        bil.running = false;
+
         bil = this.changeSpeed(bil, 0);
         bil = this.lightsOff(bil);
+        bil.running = false;
         return bil;
     }
 
