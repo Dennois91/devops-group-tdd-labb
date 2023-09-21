@@ -18,8 +18,8 @@ jobs:
        node-version: '18'
 
       #Run all tests and print report
-    - name: Run all test
-      run: ./gradlew test
-
-    - name: Upload test report
-      uses: actions/upload-artifact@v2
+    - name: Run all tests
+      run: |
+          cd test
+          npm install
+          npm run test
