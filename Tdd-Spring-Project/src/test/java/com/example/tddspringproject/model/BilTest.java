@@ -147,10 +147,28 @@ class BilTest {
     }
 
     @Test
-    void testBatteryUsage () {
+    void testBatteryUsageCombined () {
+        testbil = bilManipulator.startCar(testbil);
+        testbil = bilManipulator.changeSpeed(testbil, 40);
+        assertThat(testbil.batteryUsage).isEqualTo(4);
+        testbil = bilManipulator.lightsOn(testbil);
+        assertThat(testbil.batteryUsage).isEqualTo(4.2);
+    }
+    @Test
+    void testBatteryUsageLights (){
+        testbil = bilManipulator.startCar(testbil);
+        testbil = bilManipulator.lightsOn(testbil);
+        assertThat(testbil.batteryUsage).isEqualTo(0.2);
+    }
+    @Test
+    void testBatteryUsageSpeed () {
+
         testbil = bilManipulator.changeSpeed(testbil, 40);
         assertThat(testbil.batteryUsage).isEqualTo(4);
     }
+
+
+
 }
 //    @Test
 //    void convertCsvToList() throws FileNotFoundException {
