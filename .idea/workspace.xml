@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bdd1d6-4f47-4cb5-bc54-8ea386152a63" name="Changes" comment="Refactored repo">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tddspringproject/service/BilManipulatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/tddspringproject/model/BilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/tddspringproject/model/BilTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +79,9 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -128,6 +131,7 @@
       <workItem from="1695299925219" duration="208000" />
       <workItem from="1695300549005" duration="17000" />
       <workItem from="1695300590221" duration="373000" />
+      <workItem from="1695366752731" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="Bilmanipulator functions that also manipulates booleans belonging to other functions now calls that function instead of changing that boolean directly.">
       <option name="closed" value="true" />

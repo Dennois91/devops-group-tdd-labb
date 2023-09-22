@@ -168,16 +168,4 @@ class BilTest {
         testbil = bilManipulator.changeSpeed(testbil, 40);
         assertThat(testbil.batteryUsage).isEqualTo(40);
     }
-
-
-
 }
-//    @Test
-//    void convertCsvToList() throws FileNotFoundException {
-//
-//        File file = ResourceUtils.getFile("classpath:csvdata/beers.csv");
-//
-//        List<BeerCSVRecord> recs = beerCsvService.convertCSVToList(file);
-//
-//        assertThat(recs.size()).isGreaterThan(0);
-//    }
